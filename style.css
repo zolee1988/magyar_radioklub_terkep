@@ -14,9 +14,7 @@ html, body {
 
 /* Felső címsor */
 .header {
-  
   width: 80%;
-  
   position: absolute;
   top: 10px;
   left: 50%;
@@ -29,15 +27,15 @@ html, body {
   backdrop-filter: blur(4px);
   font-family: Arial, sans-serif;
 
-  display: flex;            /* logó + szöveg egymás mellett */
-  align-items: center;      /* függőleges középre igazítás */
-  gap: 12px;                /* logó és szöveg közti távolság */
-  text-align: left;         /* ne középre igazítson */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
 }
 
 /* Logó a fejlécben */
 .logo {
-  height: 60px;             /* fejléc magasságához igazodik */
+  height: 60px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -111,8 +109,10 @@ html, body {
 .leaflet-popup-content table {
   margin-top: 1em;
 }
+
+/* 🔵 MÓDOSÍTVA: nagyobb popup szélesség */
 .leaflet-popup-content-wrapper {
-  max-width: 300px !important;
+  max-width: 380px !important;
 }
 
 .leaflet-popup-content {
@@ -123,15 +123,17 @@ html, body {
   white-space: nowrap;
 }
 
+/* 🔵 ÚJ: linkek törése, hogy ne lógjanak ki */
+.leaflet-popup-content td a {
+  word-break: break-all;
+}
+
 @media (hover: none) {
   .leaflet-tooltip-pane {
     display: none;
   }
 }
 
-.leaflet-popup-content-wrapper {
-  max-width: 300px !important;
-}
 html {
   -webkit-text-size-adjust: 100%;
 }
