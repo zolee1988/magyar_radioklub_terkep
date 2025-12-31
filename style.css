@@ -4,92 +4,52 @@ html, body {
   height: 100%;
 }
 
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+/* --- ÚJ: MeshMap-stílusú fejléc --- */
 
-/* Felső címsor */
-.header {
-  width: 80%;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  z-index: 1000;
-  backdrop-filter: blur(4px);
-  font-family: Arial, sans-serif;
-
+#header {
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 40%);
+  color: #333;
   display: flex;
   align-items: center;
-  gap: 12px;
-  text-align: left;
+  gap: 1em;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 40px;
+  padding: 0 17px 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-/* Logó a fejlécben */
-.logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
+#header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#header a:hover {
+  opacity: 0.7;
+}
+
+#header a img {
   display: block;
 }
 
-/* Szövegblokk a logó mellett */
-.header-text {
-  display: flex;
-  flex-direction: column;
+#header div:nth-child(1) {
+  font-weight: 600;
 }
 
-.header .title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
+/* --- Térkép a fejléc alatt kezdődik --- */
 
-.header .subtitle {
-  font-size: 12px;
-  margin-bottom: 4px;
-}
-
-.header .source {
-  font-size: 12px;
-  margin-bottom: 4px;
-}
-
-.header .source a {
-  color: #aee2ff;
-  text-decoration: none;
-}
-
-.header .source a:hover {
-  text-decoration: underline;
-}
-
-.header .updated {
-  font-size: 12px;
-  margin-bottom: 4px;
-}
-
-.header .support {
-  font-size: 12px;
-  margin-bottom: 4px;
-}
-
-.support a {
-  color: #aee2ff;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.support a:hover {
-  text-decoration: underline;
+#map {
+  position: absolute;
+  top: 40px !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* --- Popup kompakt mobilbarát stílus --- */
@@ -110,7 +70,7 @@ html, body {
   margin-top: 1em;
 }
 
-/* 🔵 MÓDOSÍTVA: nagyobb popup szélesség */
+/* nagyobb popup szélesség */
 .leaflet-popup-content-wrapper {
   max-width: 380px !important;
 }
@@ -123,7 +83,7 @@ html, body {
   white-space: nowrap;
 }
 
-/* 🔵 ÚJ: linkek törése, hogy ne lógjanak ki */
+/* linkek törése */
 .leaflet-popup-content td a {
   word-break: break-all;
 }
@@ -136,11 +96,6 @@ html, body {
 
 html {
   -webkit-text-size-adjust: 100%;
-}
-
-.support img {
-  height: 14px;
-  vertical-align: middle;
 }
 
 .leaflet-popup-content table th,
