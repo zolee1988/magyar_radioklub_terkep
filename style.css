@@ -4,13 +4,14 @@ html, body {
   height: 100%;
 }
 
-/* --- ÚJ: MeshMap-stílusú fejléc --- */
+/* --- MeshMap-stílusú fejléc --- */
 
 #header {
   background-color: #fff;
   box-shadow: 0 0 4px 0 rgb(0 0 0 / 40%);
   color: #333;
   display: flex;
+  justify-content: space-between; /* ikonok jobbra */
   align-items: center;
   gap: 1em;
   font-family: "Inter", sans-serif;
@@ -38,8 +39,8 @@ html, body {
   display: block;
 }
 
-#header div:nth-child(1) {
-  font-weight: 600;
+.header-right a {
+  margin-left: 12px; /* ikonok közti távolság */
 }
 
 /* --- Térkép a fejléc alatt kezdődik --- */
@@ -102,30 +103,3 @@ html {
 .leaflet-popup-content table td {
   vertical-align: top;
 }
-
-#header {
-  background-color: #fff;
-  box-shadow: 0 0 4px 0 rgb(0 0 0 / 40%);
-  color: #333;
-  display: flex;
-  justify-content: space-between; /* <<< EZ igazítja jobbra az ikonokat */
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  height: 40px;
-  padding: 0 17px 0 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.header-right a {
-  margin-left: 12px; /* kis távolság az ikonok között */
-}
-
-#map {
-  top: 40px !important;
-}
-
