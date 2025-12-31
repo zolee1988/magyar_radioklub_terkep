@@ -16,5 +16,23 @@
     "facebook": "https://www.facebook.com/ha4kyb/",
     "qrz": "https://www.qrz.com/db/HA4KYB",
     "notes": ""
+  },
+  {
+    "name": "DQ-RADIO SE",
+    "callsign": "HG0DQR",
+    "locator": "KN07TM76vp",
+    "website": "https://www.dqradio.org/",
+    "facebook": "",
+    "qrz": "https://www.qrz.com/db/HG0DQR",
+    "notes": ""
+  },
+  {
+    "name": "Gerecse Rádióklub Sportegyesület",
+    "callsign": "HA2TAT",
+    "locator": "JN97EN85af",
+    "website": "https://gerecseradioklub.hu/",
+    "facebook": "https://www.facebook.com/Radioklubtatabanya",
+    "qrz": "https://www.qrz.com/db/HA2TAT",
+    "notes": ""
   }
 ]
