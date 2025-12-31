@@ -102,3 +102,30 @@ html {
 .leaflet-popup-content table td {
   vertical-align: top;
 }
+
+#header {
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 40%);
+  color: #333;
+  display: flex;
+  justify-content: space-between; /* <<< EZ igazítja jobbra az ikonokat */
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 17px 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-right a {
+  margin-left: 12px; /* kis távolság az ikonok között */
+}
+
+#map {
+  top: 40px !important;
+}
+
