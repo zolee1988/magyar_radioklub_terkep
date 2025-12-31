@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Magyarországi PMR Papagáj Térkép</title>
+  <title>Magyarországi rádióamatőr klubok térképe</title>
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -12,32 +12,37 @@
 
   <!-- Saját stílus -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome ikonok -->
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-<div class="header">
-  <img src="radiozona_logo.jpg" alt="Radiozona logó" class="logo">
-  <div class="textblock">
-    <div class="title">Magyarországi PMR papagájok térképe</div>
-    <div class="subtitle">készítette HG4ZKZ Zoli, a radiozona.hu listája alapján</div>
-    <div class="source">
-      Forrás: <a href="https://www.facebook.com/radiozona.hu" target="_blank">radiozona.hu – Ahol a rádiózás kezdődik</a>
-    </div>
-    <div class="updated">Utolsó frissítés: 2025.12.24.</div>
+<div id="header">
+  <div>
+    <a href="#" title="Magyarországi rádióamatőr klubok térképe">Rádióklub Térkép</a>
+  </div>
 
-    <div class="support">
-  Tetszik a térkép? Támogass PayPal-on:
-  <a href="https://www.paypal.me/zolikakiss" target="_blank">
-    <img src="https://img.shields.io/badge/PayPal-Donate-blue.svg" alt="Donate with PayPal button">
-  </a>
-</div>
+  <div>
+    <a href="https://www.qrz.com/db/HG4ZKZ" title="HG4ZKZ QRZ oldala" target="_blank">
+      <i class="fa fa-user fa-lg"></i>
+    </a>
+  </div>
 
+  <div>
+    <a href="https://github.com/zolee1988/magyar_radioklub_terkep" 
+       title="GitHub – Magyar Rádióklub Térkép" target="_blank">
+      <i class="fa fa-github fa-lg"></i>
+    </a>
+  </div>
 
+  <div>
+    <a href="https://www.paypal.me/zolikakiss" title="Támogatás PayPal-on" target="_blank">
+      <i class="fa fa-heart fa-lg"></i>
+    </a>
   </div>
 </div>
-
-
 
 <div id="map"></div>
 
