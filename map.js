@@ -6,12 +6,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18
 }).addTo(map);
 
-// PMR ikon
-const pmrIcon = L.icon({
+// Klub ikon (egyelőre a default Leaflet ikon)
+const clubIcon = L.icon({
     iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
     shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
 });
-
 
 // JSON betöltése
 fetch('radioklub.json')
@@ -22,40 +21,22 @@ fetch('radioklub.json')
             // Lokátorból koordináta
             const coords = locatorToLatLng(item.locator);
 
-            // CTCSS / DCS mezők külön kezelése
-            let toneCode = "-";
-            let toneHz = "-";
-
-            if (item.ctcss_code) {
-                toneCode = item.ctcss_code.replace("CTCSS ", ""); // csak a szám
-            }
-
-            if (item.ctcss_hz) {
-                toneHz = item.ctcss_hz + " Hz";
-            }
-
-            if (item.dcs) {
-                toneCode = item.dcs;   // pl. DCS023
-                toneHz = "-";          // nincs Hz érték
-            }
-
+            // Popup HTML
             const popupHtml = `
-    <div class="title">${item.name}</div>
-    <div style="height:2px; background:#2A81CB; margin:4px 0 6px 0; border-radius:2px;"></div>
-    <table>
-        <tr><th>QTH</th><td>${item.locator}</td></tr>
-        <tr><th>PMR</th><td>${item.channel} / ${toneCode}</td></tr>
-        <tr><th>Frekvencia</th><td>${item.freq_mhz} MHz</td></tr>
-        <tr><th>CTCSS</th><td>${toneHz}</td></tr>
-        ${item.notes ? `<tr><th>Megjegyzés</th><td>${item.notes}</td></tr>` : ""}
-    </table>
-`;
-
-
-
+                <div class="title">${item.name}</div>
+                <div style="height:2px; background:#2A81CB; margin:4px 0 6px 0; border-radius:2px;"></div>
+                <table>
+                    <tr><th>Callsign</th><td>${item.callsign}</td></tr>
+                    <tr><th>Locator</th><td>${item.locator}</td></tr>
+                    ${item.website ? `<tr><th>Web</th><td><a href="${item.website}" target="_blank">${item.website}</a></td></tr>` : ""}
+                    ${item.facebook ? `<tr><th>Facebook</th><td><a href="${item.facebook}" target="_blank">${item.facebook}</a></td></tr>` : ""}
+                    ${item.qrz ? `<tr><th>QRZ</th><td><a href="${item.qrz}" target="_blank">${item.qrz}</a></td></tr>` : ""}
+                    ${item.notes ? `<tr><th>Megjegyzés</th><td>${item.notes}</td></tr>` : ""}
+                </table>
+            `;
 
             // Marker
-            L.marker([coords.lat, coords.lng], { icon: pmrIcon })
+            L.marker([coords.lat, coords.lng], { icon: clubIcon })
                 .addTo(map)
                 .bindPopup(popupHtml);
         });
