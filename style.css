@@ -83,9 +83,9 @@ html, body {
   white-space: nowrap;
 }
 
-/* linkek törése */
+/* linkek ne törjenek */
 .leaflet-popup-content td a {
-  word-break: break-all;
+  white-space: nowrap;
 }
 
 @media (hover: none) {
