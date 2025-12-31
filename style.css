@@ -1,0 +1,147 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Felső címsor */
+.header {
+  
+  width: 80%;
+  
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  font-family: Arial, sans-serif;
+
+  display: flex;            /* logó + szöveg egymás mellett */
+  align-items: center;      /* függőleges középre igazítás */
+  gap: 12px;                /* logó és szöveg közti távolság */
+  text-align: left;         /* ne középre igazítson */
+}
+
+/* Logó a fejlécben */
+.logo {
+  height: 60px;             /* fejléc magasságához igazodik */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Szövegblokk a logó mellett */
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.header .subtitle {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.header .source {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.header .source a {
+  color: #aee2ff;
+  text-decoration: none;
+}
+
+.header .source a:hover {
+  text-decoration: underline;
+}
+
+.header .updated {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.header .support {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.support a {
+  color: #aee2ff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.support a:hover {
+  text-decoration: underline;
+}
+
+/* --- Popup kompakt mobilbarát stílus --- */
+
+.leaflet-popup-content {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.leaflet-popup-content .title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.leaflet-popup-content table {
+  margin-top: 1em;
+}
+.leaflet-popup-content-wrapper {
+  max-width: 300px !important;
+}
+
+.leaflet-popup-content {
+  -webkit-text-size-adjust: 100%;
+}
+
+.leaflet-popup-content table th {
+  white-space: nowrap;
+}
+
+@media (hover: none) {
+  .leaflet-tooltip-pane {
+    display: none;
+  }
+}
+
+.leaflet-popup-content-wrapper {
+  max-width: 300px !important;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+.support img {
+  height: 14px;
+  vertical-align: middle;
+}
+
+.leaflet-popup-content table th,
+.leaflet-popup-content table td {
+  vertical-align: top;
+}
