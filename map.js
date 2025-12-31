@@ -26,8 +26,8 @@ fetch('radioklub.json')
                 <div class="title">${item.name}</div>
                 <div style="height:2px; background:#2A81CB; margin:4px 0 6px 0; border-radius:2px;"></div>
                 <table>
-                    <tr><th>Callsign</th><td>${item.callsign}</td></tr>
-                    <tr><th>Locator</th><td>${item.locator}</td></tr>
+                    <tr><th>Hívójel</th><td>${item.callsign}</td></tr>
+                    <tr><th>Lokátor</th><td>${item.locator}</td></tr>
                     ${item.website ? `<tr><th>Web</th><td><a href="${item.website}" target="_blank">${item.website}</a></td></tr>` : ""}
                     ${item.facebook ? `<tr><th>Facebook</th><td><a href="${item.facebook}" target="_blank">${item.facebook}</a></td></tr>` : ""}
                     ${item.qrz ? `<tr><th>QRZ</th><td><a href="${item.qrz}" target="_blank">${item.qrz}</a></td></tr>` : ""}
