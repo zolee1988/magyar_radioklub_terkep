@@ -1,4 +1,4 @@
-function locatorToLatLon(locator) {
+function locatorToLatLng(locator) {
   if (!locator || locator.length < 4) return { lat: 0, lon: 0 };
 
   locator = locator.toUpperCase();
