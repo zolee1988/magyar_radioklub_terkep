@@ -19,7 +19,8 @@ fetch('radioklub.json')
         data.forEach(item => {
 
             // Lokátorból koordináta
-            const coords = locatorToLatLng(item.locator);
+            const coords = locatorToLatLon(item.locator);
+
 
             // Popup HTML
             const popupHtml = `
