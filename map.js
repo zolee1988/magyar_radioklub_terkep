@@ -36,7 +36,7 @@ fetch('radioklub.json')
             `;
 
             // Marker
-            L.marker([coords.lat, coords.lng], { icon: clubIcon })
+            L.marker([coords.lat, coords.log], { icon: clubIcon })
                 .addTo(map)
                 .bindPopup(popupHtml);
         });
