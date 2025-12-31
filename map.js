@@ -14,7 +14,7 @@ const pmrIcon = L.icon({
 
 
 // JSON betöltése
-fetch('pmr_papagajok.json')
+fetch('radioklub.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(item => {
