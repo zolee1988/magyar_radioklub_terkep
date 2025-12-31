@@ -1,6 +1,5 @@
 [
   {
-    
     "name": "BKV Rádióklub",
     "callsign": "HA5BKV",
     "locator": "JN97NR29OR",
@@ -8,5 +7,14 @@
     "facebook": "https://www.facebook.com/bkvradioklub",
     "qrz": "https://www.qrz.com/db/HA5BKV",
     "notes": "Aktív klub, rendszeres foglalkozásokkal."
+  },
+  {
+    "name": "Szöllősi József Rádióklub",
+    "callsign": "HA4KYB",
+    "locator": "JN97EE87fu",
+    "website": "https://www.ha4kyb.hu/",
+    "facebook": "https://www.facebook.com/ha4kyb/",
+    "qrz": "https://www.qrz.com/db/HA4KYB",
+    "notes": ""
   }
 ]
