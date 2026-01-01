@@ -77,6 +77,12 @@ fetch("https://wiki.ham.hu/api.php?action=parse&page=Kateg%C3%B3ria:R%C3%A1di%C3
             Object.keys(club).forEach(key => {
                 const value = club[key];
 
+                // Üres mezők kihagyása
+                if (!value || value.trim() === "") return;
+
+                // "Név" mezőt kihagyjuk (már a fejlécben van)
+                if (key === "Név") return;
+
                 // Hívójel → QRZ link
                 if (key === "Hívójel") {
                     const callsign = value;
@@ -88,9 +94,12 @@ fetch("https://wiki.ham.hu/api.php?action=parse&page=Kateg%C3%B3ria:R%C3%A1di%C3
                 // Link mezők külön kezelése
                 if (key.endsWith("_link")) {
                     const baseKey = key.replace("_link", "");
-                    rows += `<tr><th>${baseKey} (link)</th><td><a href="${value}" target="_blank">${value}</a></td></tr>`;
+                    rows += `<tr><th>${baseKey}</th><td><a href="${value}" target="_blank">${value}</a></td></tr>`;
                     return;
                 }
+
+                // A sima "Link" mezőt kihagyjuk, ha van hozzá "_link"
+                if (key === "Link" && club["Link_link"]) return;
 
                 // Normál mezők
                 rows += `<tr><th>${key}</th><td>${value}</td></tr>`;
