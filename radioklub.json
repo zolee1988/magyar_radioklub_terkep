@@ -1,5 +1,5 @@
 [
-  {
+    {
     "name": "BKV Rádióklub",
     "callsign": "HA5BKV",
     "locator": "JN97NR29OR",
@@ -7,8 +7,8 @@
     "facebook": "https://www.facebook.com/bkvradioklub",
     "qrz": "https://www.qrz.com/db/HA5BKV",
     "notes": "Aktív klub, rendszeres foglalkozásokkal."
-  },
-  {
+    },
+    {
     "name": "Szöllősi József Rádióklub",
     "callsign": "HA4KYB",
     "locator": "JN97EE87fu",
@@ -16,17 +16,17 @@
     "facebook": "https://www.facebook.com/ha4kyb/",
     "qrz": "https://www.qrz.com/db/HA4KYB",
     "notes": ""
-  },
-  {
-    "name": "DQ-RADIO SE",
+    },
+    {
+     "name": "DQ-RADIO SE",
     "callsign": "HG0DQR",
     "locator": "KN07TM76vp",
     "website": "https://www.dqradio.org/",
     "facebook": "",
     "qrz": "https://www.qrz.com/db/HG0DQR",
     "notes": ""
-  },
-  {
+    },
+    {
     "name": "Gerecse Rádióklub Sportegyesület",
     "callsign": "HA2TAT",
     "locator": "JN97EN85af",
@@ -34,5 +34,52 @@
     "facebook": "https://www.facebook.com/Radioklubtatabanya",
     "qrz": "https://www.qrz.com/db/HA2TAT",
     "notes": ""
-  }
+    },
+    {
+    "name": "MOM Rádióklub",
+    "callsign": "HA5KFV",
+    "locator": "JN97ML27fo",
+    "website": "https://honlap.momrk.hu/",
+    "facebook": "",
+    "qrz": "https://www.qrz.com/db/HA5KFV",
+    "notes": ""
+    },
+    {
+    "name": "Normafa Műhely",
+    "callsign": "HA5KNF",
+    "locator": "JN97ML12uj",
+    "website": "http://www.normafamuhely.hu/",
+    "facebook": "https://www.facebook.com/normafamuhely.hu",
+    "qrz": "https://www.qrz.com/db/HA5KNF",
+    "notes": "Ahol sikerünk kulcsa a közösség, tudás és teljesítmény"
+    },
+  {
+  "name": "Simonyi Károly Szakkollégiumi Rádióamatőr Klub",
+  "callsign": "HA5KFU",
+  "locator": "JN97ML63jm",
+  "website": "https://ha5kfu.hu/",
+  "facebook": "https://www.facebook.com/ha5kfu/",
+  "qrz": "https://www.qrz.com/db/HA5KFU",
+  "notes": "BME Schönherz Kollégium 19. emelet"
+},
+{
+  "name": "Honfy József Rádióamatőr Klub",
+  "callsign": "HA1KHJ",
+  "locator": "JN87TQ56go",
+  "website": "https://ha1khj.hu/",
+  "facebook": "",
+  "qrz": "https://www.qrz.com/db/HA1KHJ",
+  "notes": ""
+},
+{
+  "name": "Kaposvári Rádióamatőr Klub",
+  "callsign": "HA3KGC",
+  "locator": "JN86VI55ig",
+  "website": "https://ha3kgc.hu/",
+  "facebook": "",
+  "qrz": "https://www.qrz.com/db/HA3KGC",
+  "notes": ""
+}
+
+
 ]
