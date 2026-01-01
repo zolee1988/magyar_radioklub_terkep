@@ -13,3 +13,13 @@ A térkép elérhető itt:
 **https://zolee1988.github.io/magyar_radioklub_terkep/**
 
 A térképet készíti és karbantartja: **HG4ZKZ Zoli**
+
+---
+
+## Adatforrás
+
+A klubok listája és adatai automatikusan a következő wikioldalról töltődnek be:
+
+[https://wiki.ham.hu/index.php?title=Kategória:Rádióklubok](https://wiki.ham.hu/index.php?title=Kategória:Rádióklubok)
+
+A térkép minden megnyitáskor a wiki aktuális tartalmát dolgozza fel, így az adatok mindig naprakészek maradnak.
