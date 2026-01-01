@@ -22,4 +22,16 @@ A klubok listája és adatai automatikusan a következő wikioldalról töltődn
 
 [https://wiki.ham.hu/index.php?title=Kategória:Rádióklubok](https://wiki.ham.hu/index.php?title=Kategória:Rádióklubok)
 
-A térkép minden megnyitáskor a wiki aktuális tartalmát dolgozza fel, így az adatok mindig naprakészek maradnak.
+## Hogyan működik?
+
+A térkép teljesen automatikusan épül fel a wiki adatai alapján:
+
+1. A rendszer beolvassa a wikioldalon található táblázatot, amely a magyarországi rádióklubokat tartalmazza.
+2. Minden sorból egy klubobjektum készül, a táblázat oszlopai alapján.
+3. A QTH mező alapján meghatározzuk a klub földrajzi koordinátáit, és elhelyezzük a térképen.
+4. A hívójel automatikusan a QRZ.com megfelelő oldalára mutató linkké alakul, így egy kattintással elérhető a klub hívójelének adatlapja.
+5. A táblázatban található linkeknél a link szövege jelenik meg, de a háttérben a teljes URL-re mutat.
+6. Az üres cellákat nem jelenítjük meg, hogy a popup tiszta és áttekinthető maradjon.
+7. A térkép minden megnyitáskor a wiki aktuális tartalmát dolgozza fel, így mindig naprakész.
+
+A feldolgozás teljesen automatikus, nem igényel kézi adatkarbantartást.
