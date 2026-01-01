@@ -91,10 +91,11 @@ fetch("https://wiki.ham.hu/api.php?action=parse&page=Kateg%C3%B3ria:R%C3%A1di%C3
                     return;
                 }
 
-                // Link mezők külön kezelése
+                // Link mezők külön kezelése → a cella szövegét jelenítjük meg, nem az URL-t
                 if (key.endsWith("_link")) {
                     const baseKey = key.replace("_link", "");
-                    rows += `<tr><th>${baseKey}</th><td><a href="${value}" target="_blank">${value}</a></td></tr>`;
+                    const textValue = club[baseKey] || baseKey; // ha nincs szöveg, fallback
+                    rows += `<tr><th>${baseKey}</th><td><a href="${value}" target="_blank">${textValue}</a></td></tr>`;
                     return;
                 }
 
