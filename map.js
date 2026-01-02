@@ -77,45 +77,46 @@ fetch("https://wiki.ham.hu/api.php?action=parse&page=Kateg%C3%B3ria:R%C3%A1di%C3
             if (!coords) return;
 
             // Popup HTML dinamikusan, minden mezővel
-            let rows = "";
+let rows = "";
 
-            Object.keys(club).forEach(key => {
-                const value = club[key];
+Object.keys(club).forEach(key => {
+    const value = club[key];
 
-                // Üres mezők kihagyása
-                if (!value || value.trim() === "") return;
+    // Üres mezők kihagyása
+    if (!value || value.trim() === "") return;
 
-                // "Név" mezőt kihagyjuk (már a fejlécben van)
-                if (key === "Név") return;
+    // "Név" mezőt kihagyjuk (már a fejlécben van)
+    if (key === "Név") return;
 
-                // Hívójel → QRZ link
-                if (key === "Hívójel") {
-                    const callsign = value;
-                    const qrzUrl = `https://www.qrz.com/db/${callsign}`;
-                    rows += `<tr><th>${key}</th><td><a href="${qrzUrl}" target="_blank">${callsign}</a></td></tr>`;
-                    return;
-                }
+    // Hívójel → QRZ link
+    if (key === "Hívójel") {
+        const callsign = value;
+        const qrzUrl = `https://www.qrz.com/db/${callsign}`;
+        rows += `<tr><th>${key}</th><td><a href="${qrzUrl}" target="_blank">${callsign}</a></td></tr>`;
+        return;
+    }
 
-                // Link mezők külön kezelése → a cella szövegét jelenítjük meg, nem az URL-t
-                if (key.endsWith("_link")) {
-                    const baseKey = key.replace("_link", "");
-                    const textValue = club[baseKey] || baseKey; // ha nincs szöveg, fallback
-                    rows += `<tr><th>${baseKey}</th><td><a href="${value}" target="_blank">${textValue}</a></td></tr>`;
-                    return;
-                }
+    // Link mezők külön kezelése → a cella szövegét jelenítjük meg, nem az URL-t
+    if (key.endsWith("_link")) {
+        const baseKey = key.replace("_link", "");
+        const textValue = club[baseKey] || baseKey; // ha nincs szöveg, fallback
+        rows += `<tr><th>${baseKey}</th><td><a href="${value}" target="_blank">${textValue}</a></td></tr>`;
+        return;
+    }
 
-                // A sima "Link" mezőt kihagyjuk, ha van hozzá "_link"
-                if (key === "Link" && club["Link_link"]) return;
+    // A sima "Weboldal" mezőt kihagyjuk, ha van hozzá "_link"
+    if (key === "Weboldal" && club["Weboldal_link"]) return;
 
-                // Normál mezők
-                rows += `<tr><th>${key}</th><td>${value}</td></tr>`;
-            });
+    // Normál mezők
+    rows += `<tr><th>${key}</th><td>${value}</td></tr>`;
+});
 
-            const popupHtml = `
-                <div class="title">${club["Név"] || "Ismeretlen klub"}</div>
-                <div style="height:2px; background:#2A81CB; margin:4px 0 6px 0; border-radius:2px;"></div>
-                <table>${rows}</table>
-            `;
+const popupHtml = `
+    <div class="title">${club["Név"] || "Ismeretlen klub"}</div>
+    <div style="height:2px; background:#2A81CB; margin:4px 0 6px 0; border-radius:2px;"></div>
+    <table>${rows}</table>
+`;
+
 
             L.marker([coords.lat, coords.lon], { icon: clubIcon })
                 .addTo(map)
